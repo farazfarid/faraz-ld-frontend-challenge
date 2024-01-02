@@ -98,7 +98,7 @@ const Table: React.FC = () => {
 
   return (
     <div className="flex flex-col p-8">
-      <div className="flex justify-evenly items-center  dark:border-gray-700 p-4">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full mb-4 bg-white/30 rounded-md border border-gray-200 dark:border-gray-700 p-4">
         <label>
           <SearchInput
             value={searchName}
@@ -116,11 +116,12 @@ const Table: React.FC = () => {
         </label>
       </div>
 
-      <div className="mx-auto flex justify-center items-center bg-white/30 rounded-md p-4 w-2/3 mb-4">
-        <p className="">
-          Min Power: {minPower !== null ? minPower : "N/A"} | Max Power:{" "}
-          {maxPower !== null ? maxPower : "N/A"}
+      <div className="mx-auto flex flex-col md:flex-row justify-center items-center bg-white/30 rounded-md p-4 w-2/3 mb-4">
+        <p className="md:mr-1">
+          Min Power: {minPower !== null ? minPower : "N/A"}
         </p>
+        <span className="hidden md:block md:mr-1">|</span>
+        <p className="">Max Power: {maxPower !== null ? maxPower : "N/A"}</p>
       </div>
 
       <div className="text-text flex flex-col items-center justify-center w-full h-full mb-4">
