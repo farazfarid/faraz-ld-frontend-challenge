@@ -13,6 +13,16 @@ const Home: React.FC = () => {
         />
       </h1>
       <PokemonTable />
+      <footer className="flex justify-center items-center text-outline-white">
+        Made with ❤️ by
+        <a
+          className="flex flex-row ml-2 text-outline-white hover:text-outline-black pokeball drop-shadow-lg hover:drop-shadow-3xl transition-all duration-500 ease-in-out cursor-pointer underline underline-offset-4 decoration-2"
+          href="https://www.farazfarid.me"
+        >
+          Faraz
+          <img src="./logo.webp" alt="pokeball" className="ml-2 h-6" />
+        </a>
+      </footer>
     </div>
   );
 };
